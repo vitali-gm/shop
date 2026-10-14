@@ -1,4 +1,4 @@
-import './styles.css'
+import './ProductPage.css'
 
 const product = {
   title: 'Жіночі демісезонні напівчоботи ALLSY',
@@ -25,10 +25,15 @@ export default function ProductPage() {
     <div className="product-page">
       <section className="product-layout">
         <div className="gallery">
-          <img className="main-image" src={product.images[0]} alt={product.title} />
+          <div className="main-image-wrap">
+            <img className="main-image" src={product.images[0]} alt={product.title} />
+          </div>
+
           <div className="thumbnail-row">
             {product.images.map((image, index) => (
-              <img key={index} className="thumbnail" src={image} alt={`${product.title} ${index + 1}`} />
+              <button key={index} type="button" className="thumbnail-button" aria-label={`Image ${index + 1}`}>
+                <img className="thumbnail" src={image} alt={`${product.title} ${index + 1}`} />
+              </button>
             ))}
           </div>
         </div>
@@ -39,32 +44,32 @@ export default function ProductPage() {
           <p className="product-price">{product.price}</p>
           <p className="product-description">{product.description}</p>
 
-          <div className="product-details">
+          <dl className="product-details">
             <div>
-              <span>Артикул</span>
-              <strong>{product.sku}</strong>
+              <dt>Артикул</dt>
+              <dd>{product.sku}</dd>
             </div>
             <div>
-              <span>Колір</span>
-              <strong>{product.color}</strong>
+              <dt>Колір</dt>
+              <dd>{product.color}</dd>
             </div>
             <div>
-              <span>Верх</span>
-              <strong>{product.materialUpper}</strong>
+              <dt>Верх</dt>
+              <dd>{product.materialUpper}</dd>
             </div>
             <div>
-              <span>Підкладка</span>
-              <strong>{product.materialLining}</strong>
+              <dt>Підкладка</dt>
+              <dd>{product.materialLining}</dd>
             </div>
             <div>
-              <span>Підошва</span>
-              <strong>{product.materialSole}</strong>
+              <dt>Підошва</dt>
+              <dd>{product.materialSole}</dd>
             </div>
             <div>
-              <span>Призначення</span>
-              <strong>{product.purpose}</strong>
+              <dt>Призначення</dt>
+              <dd>{product.purpose}</dd>
             </div>
-          </div>
+          </dl>
 
           <div className="size-block">
             <p>Доступні розміри</p>
