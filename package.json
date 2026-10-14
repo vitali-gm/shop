@@ -1,0 +1,13 @@
+{
+  "name": "shop",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "echo \"Run frontend and backend separately from their workspaces\"",
+    "build": "echo \"Build from frontend/backend workspaces\""
+  }
+}
