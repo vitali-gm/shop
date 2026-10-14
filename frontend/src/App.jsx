@@ -1,42 +1,48 @@
+import SiteHeader from './SiteHeader'
+import FeedbackForm from './FeedbackForm'
+import SiteFooter from './SiteFooter'
+import './styles.css'
+
 export default function App() {
   return (
-    <div className="app-shell">
-      <header className="site-header">
-        <div>
-          <p className="eyebrow">ALLSY footwear catalog</p>
-          <h1>Жіноче взуття з акцентом на стиль, комфорт і якість</h1>
-          <p className="lead">
-            Каталог без кошика — зручно переглядайте моделі та залишайте заявку через форму зворотного зв&apos;язку.
+    <div id="home">
+      <SiteHeader />
+      <main>
+        <section className="hero-section">
+          <div>
+            <p className="section-label">Жіноче взуття</p>
+            <h1>Стильний каталог взуття для щоденного комфорту</h1>
+            <p className="hero-text">
+              Преміальний вітринний сайт без кошика — зручний перегляд товарів і швидкий контакт через форму заявки.
+            </p>
+          </div>
+        </section>
+
+        <section id="catalog">
+          <div className="section-heading">
+            <p className="section-label">Каталог</p>
+            <h2>Рекомендовані моделі</h2>
+          </div>
+          <iframe
+            title="Catalog Preview"
+            className="page-frame"
+            srcDoc={`<!doctype html><html><body style="margin:0;font-family:Arial"><div style="padding:20px">Catalog page preview</div></body></html>`}
+          />
+        </section>
+
+        <section id="about" className="about-section">
+          <div>
+            <p className="section-label">Про бренд</p>
+            <h2>Натуральні матеріали, зручність і сучасний силует</h2>
+          </div>
+          <p>
+            Каталог побудований для продажу взуття через консультацію: користувач переглядає товар, дивиться фото, читає характеристики й залишає заявку.
           </p>
-        </div>
-        <div className="hero-card">
-          <span className="badge">New collection</span>
-          <h2>2995 грн</h2>
-          <p>Жіночі демісезонні напівчоботи ALLSY</p>
-        </div>
-      </header>
-
-      <main className="content-grid">
-        <section className="panel">
-          <h3>Переваги</h3>
-          <ul>
-            <li>Натуральна шкіра</li>
-            <li>Байкова підкладка</li>
-            <li>Гумова підошва</li>
-            <li>Розміри 36–41</li>
-          </ul>
         </section>
 
-        <section className="panel">
-          <h3>Наступні сторінки</h3>
-          <ul>
-            <li>Головна</li>
-            <li>Каталог</li>
-            <li>Сторінка товару</li>
-            <li>Форма зворотного зв&apos;язку</li>
-          </ul>
-        </section>
+        <FeedbackForm />
       </main>
+      <SiteFooter />
     </div>
   )
 }
