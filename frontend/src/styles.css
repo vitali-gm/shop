@@ -26,7 +26,9 @@ a {
 .feedback-section,
 .site-footer,
 .section-heading,
-.page-frame {
+.page-frame,
+.text-page,
+.featured-section {
   max-width: 1200px;
   margin: 0 auto;
   padding-left: 24px;
@@ -65,16 +67,22 @@ a {
   flex-wrap: wrap;
 }
 
+.site-nav a.active {
+  text-decoration: underline;
+}
+
 .hero-section,
 .about-section,
-.feedback-card {
+.feedback-card,
+.text-page {
   padding-top: 48px;
   padding-bottom: 48px;
 }
 
 .hero-section h1,
 .about-section h2,
-.feedback-card h2 {
+.feedback-card h2,
+.text-page h1 {
   margin: 10px 0 0;
   font-size: clamp(2rem, 5vw, 4.2rem);
   line-height: 1.05;
@@ -82,10 +90,16 @@ a {
 
 .hero-text,
 .about-section p,
-.feedback-text {
+.feedback-text,
+.text-page p {
   max-width: 60ch;
   color: #5b554d;
   line-height: 1.7;
+}
+
+.featured-section {
+  padding-top: 0;
+  padding-bottom: 24px;
 }
 
 .page-frame {

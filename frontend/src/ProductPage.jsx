@@ -1,4 +1,4 @@
-import './ProductPage.css'
+import './styles.css'
 
 const product = {
   title: 'Жіночі демісезонні напівчоботи ALLSY',

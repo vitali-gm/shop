@@ -2,7 +2,7 @@ import './styles.css'
 
 export default function FeedbackForm() {
   return (
-    <section className="feedback-section">
+    <section className="feedback-section" id="contacts">
       <div className="feedback-card">
         <p className="section-label">Зворотний зв&apos;язок</p>
         <h2>Залиште заявку — ми зв&apos;яжемось з вами</h2>
