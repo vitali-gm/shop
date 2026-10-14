@@ -1,4 +1,5 @@
-import './styles.css'
+import { Link } from 'react-router-dom'
+import './CatalogPage.css'
 
 const products = [
   {
@@ -41,7 +42,7 @@ export default function CatalogPage() {
           <p className="catalog-label">Каталог</p>
           <h1>Жіноче взуття ALLSY</h1>
           <p className="catalog-description">
-            Переглядайте моделі, обирайте розмір і залишайте заявку через форму зворотного зв&apos;язку.
+            Переглядайте моделі, обирайте розмір і залишайте заявку через форму зворотного зв'язку.
           </p>
         </div>
         <div className="catalog-filters">
